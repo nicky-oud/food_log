@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= @meal.name %></h1>
+<p>
+  <%= @meal.description %>
+</p>
+
+<p>
+  <%= image_tag @meal.image.url(:medium) %>
+</p>
+
+<%= link_to 'Edit', edit_meal_path(@meal) %> |
+<%= link_to 'Back', meals_path %> |
+<%= link_to 'Delete', @meal, method: :delete, data: { confirm: 'Are you sure?' }%>
